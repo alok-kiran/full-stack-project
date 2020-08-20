@@ -14,6 +14,14 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.json$/,
+        type: 'javascript/auto',
+        exclude: /node_modules/,
+        use: {
+          loader: 'json-loader'
+        }
       }
     ]
   }

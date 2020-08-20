@@ -1,9 +1,10 @@
 import express from 'express'
 const router = express.Router()
+import data from '../src/components/TestData.json'
 
-router.get('/', (req, res)=>{
+router.get('/contests', (req, res)=>{
   res.send({
-    data: []
+    contests: data.contests
   })
 })
 

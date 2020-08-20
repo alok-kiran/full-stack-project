@@ -4,6 +4,6 @@ import App from './components/App'
 import data from './components/TestData.json'
 
 ReactDOM.render(
-  <App contestData={data.contests}/>,
+  <App initialContests={[]}/>,
   document.getElementById('root')
 );

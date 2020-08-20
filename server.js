@@ -3,8 +3,9 @@ const server = express();
 import apiRouter from './api'
 import sassMiddleware from 'node-sass-middleware'
 import path from 'path'
-
-const PORT = '8080'
+import config from './config'
+//import  serverRender from './ServerRender';
+const PORT = config.port
 server.use(sassMiddleware({
   src: path.join(__dirname, 'sass'),
   dest: path.join(__dirname, 'public')
@@ -21,6 +22,6 @@ server.get('/', (req, res)=>{
 
 server.use(express.static('public'))
 
-server.listen(PORT, ()=>{
+server.listen(PORT,config.hostname, ()=>{
   console.info(`Server is running on the port ${PORT}`);
 });

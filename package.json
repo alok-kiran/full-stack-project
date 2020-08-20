@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/alok-kiran/full-stack-project#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "json-loader": "^0.5.7",

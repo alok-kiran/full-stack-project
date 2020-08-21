@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Header from './Header'
-import ContestPreview from './ContestPreview'
 import axios from 'axios'
-
+import ContestList from './ContestList'
 class App extends Component {
   state = {
     test: 42,
@@ -30,11 +29,7 @@ class App extends Component {
         <div>
         <Header headerTitle = {this.state.headerTitle}/>
         </div> 
-        <div className="text-left">
-        {
-          this.state.contests.map((item)=> (<ContestPreview {...item} key={item.id}/>))
-        }
-        </div>
+        <ContestList contests={this.state.contests}/>
       </React.Fragment>
     )
   }

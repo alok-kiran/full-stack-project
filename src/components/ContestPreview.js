@@ -1,14 +1,16 @@
 import React from 'react'
 
-const ContestPreview = contest => {
-  return (<div className="container">
-      <div className="category-name">
-      {contest.categoryName}
-      </div>
-      <div className="contest-name">
-      {contest.contestName}
-      </div>
-    </div>)
+class ContestPreview extends React.Component {
+  render(){
+    return (<div className="link container" onClick={()=>alert(JSON.stringify(this.props))}>
+    <div className="category-name">
+    {this.props.categoryName}
+    </div>
+    <div className="contest-name">
+    {this.props.contestName}
+    </div>
+  </div>)
+  }
 }
 
 export default ContestPreview;
